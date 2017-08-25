@@ -16,7 +16,7 @@ if($error -eq $false){
         $rawUI.BufferSize = $newSize
     }
     Add-WindowsFeature NET-Framework-45-ASPNET
-	Add-WindowsFeature Web-Asp-Net45
+    Add-WindowsFeature Web-Asp-Net45
     Start-Sleep -Seconds 10
 
     C:\New-ServerLoad.ps1
