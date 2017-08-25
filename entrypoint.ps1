@@ -15,6 +15,10 @@ if($error -eq $false){
         $newSize = New-Object $typeName (150, $oldSize.Height)
         $rawUI.BufferSize = $newSize
     }
+    Add-WindowsFeature NET-Framework-45-ASPNET
+	Add-WindowsFeature Web-Asp-Net45
+    Start-Sleep -Seconds 10
+
     C:\New-ServerLoad.ps1
     Start-Sleep -Seconds 5
     C:\Get-ServerMetrics.ps1
