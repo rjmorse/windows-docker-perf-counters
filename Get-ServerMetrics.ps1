@@ -1,2 +1,3 @@
-((Get-Counter -ListSet "asp.net appli*").paths | Get-Counter).CounterSamples | Format-Table
-((Get-Counter -ListSet "asp.net appli*").paths | Get-Counter).CounterSamples | Group-Object cookedvalue
+$samples = ((Get-Counter -ListSet "asp.net appli*").paths | Get-Counter).CounterSamples 
+$samples | Format-Table
+$samples | Group-Object cookedvalue
